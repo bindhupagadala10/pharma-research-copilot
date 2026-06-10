@@ -1,5 +1,5 @@
 import chromadb
-from embedder import generate_embedding
+from src.embedder import generate_embedding
 
 
 client = chromadb.PersistentClient(

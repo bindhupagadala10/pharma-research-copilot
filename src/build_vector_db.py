@@ -1,6 +1,6 @@
-from pdf_loader import load_multiple_pdfs
-from chunker import chunk_documents
-from embedder import generate_embedding
+from src.pdf_loader import load_multiple_pdfs
+from src.chunker import chunk_documents
+from src.embedder import generate_embedding
 
 import chromadb
 
@@ -55,3 +55,7 @@ for i, chunk in enumerate(chunks):
     )
 
 print("Vector database built successfully")
+
+print(
+    f"Total vectors stored: {collection.count()}"
+)
