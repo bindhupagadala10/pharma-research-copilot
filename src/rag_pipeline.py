@@ -35,4 +35,11 @@ Answer:
 
     answer = generate_answer(prompt)
 
-    return answer, results
+    sources = list(
+        set(
+            result["filename"]
+            for result in results
+        )
+   )
+
+    return answer, sources  
